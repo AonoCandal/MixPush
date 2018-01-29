@@ -10,6 +10,15 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+
+        manifestPlaceholders = [
+                GETUI_APP_ID : "dffYenHmK69XT0JjiUwJS6",
+                GETUI_APP_KEY : "AaCVKURJuLAsqT9peqRXR2",
+                GETUI_APP_SECRET : "2UIwiScCqK9uNckgG9qnZ9",
+                PACKAGE_NAME: "com.aono.conor"
+        ]
+
     }
     buildTypes {
         release {
@@ -24,6 +33,11 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+
+    compile 'com.github.joyrun.MixPush:client-core:1.2.0' //必填
+    compile 'com.github.joyrun.MixPush:client-mipush:1.2.0' // 小米推送
+    compile 'com.github.joyrun.MixPush:client-getui:1.2.0' // 个推
+
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support:design:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
